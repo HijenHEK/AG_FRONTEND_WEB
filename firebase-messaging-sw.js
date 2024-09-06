@@ -16,18 +16,21 @@ firebase.initializeApp({
                        });
 
 const messaging = firebase.messaging();
+//BO_1VxQJI9dXSvX6UYVHew2J3JJW6dSH37K9e5lPLGfSDKDFeIFVs8Jv_73NFR6TRzQQB7tV0-aXNSUn21mKIaQ
 
-self.addEventListener('push', function(event) {
-  console.log('Push event received:', event);
 
-  const data = event.data ? event.data.json() : {};
-  const title = data.notification ? data.notification.title : 'Default Title';
-  const options = {
-    body: data.notification ? data.notification.body : 'Default Body',
-    icon: data.notification ? data.notification.icon : 'default-icon.png',
-  };
-
-  console.log('Showing notification with title:', title);
-
-  self.registration.showNotification(title, options);
-});
+//
+//self.addEventListener('push', function(event) {
+//  console.log('Push event received:', event);
+//
+//  const data = event.data ? event.data.json() : {};
+//  const title = data.notification ? data.notification.title : 'Default Title';
+//  const options = {
+//    body: data.notification ? data.notification.body : 'Default Body',
+//    icon: data.notification ? data.notification.icon : 'default-icon.png',
+//  };
+//
+//  console.log('Showing notification with title:', title);
+//
+//  self.registration.showNotification(title, options);
+//});
