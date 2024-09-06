@@ -36,7 +36,7 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('/AG_FRONTEND_WEB/firebase-messaging-sw.js', {
-        scope: '/firebase-cloud-messaging-push-scope',
+        scope: '/AG_FRONTEND_WEB/firebase-cloud-messaging-push-scope',
       });
     });
   }
