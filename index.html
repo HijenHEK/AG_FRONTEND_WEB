@@ -25,9 +25,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="giga_servizi_app">
 
-
- 
-
   <title>giga_servizi_app</title>
   <link rel="manifest" href="manifest.json">
 </head>
@@ -35,8 +32,8 @@
 <script src="flutter_bootstrap.js" async>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/AG_FRONTEND_WEB/firebase-messaging-sw.js', {
-        scope: '/AG_FRONTEND_WEB/firebase-cloud-messaging-push-scope',
+      navigator.serviceWorker.register('/firebase-messaging-sw.js', {
+        scope: '/firebase-cloud-messaging-push-scope',
       });
     });
   }

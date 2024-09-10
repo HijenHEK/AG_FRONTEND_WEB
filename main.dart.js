@@ -125222,7 +125222,7 @@ var $async$q5=A.n(function(c,d){if(c===1){o=d
 s=p}while(true)switch(s){case 0:p=4
 k=t.N
 s=7
-return A.p(n.a.iU("/api/v1/login",A.ad(["email",a,"password",b],k,k),t.z),$async$q5)
+return A.p(n.a.iU("/api/v1/login",A.ad(["email",a,"password",b,"device_id","wdsds","device_type","test"],k,k),t.z),$async$q5)
 case 7:m=d
 A.aD("login auth response "+A.e(m.a))
 l=A.e4(m.a)
