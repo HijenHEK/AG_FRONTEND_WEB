@@ -36,8 +36,8 @@
 <script src="flutter_bootstrap.js" async>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-          navigator.serviceWorker.register('./firebase-messaging-sw.js', {
-            scope: '/firebase-cloud-messaging-push-scope',
+          navigator.serviceWorker.register('/AG_FRONTEND_WEB/firebase-messaging-sw.js', {
+            scope: '/AG_FRONTEND_WEB/firebase-cloud-messaging-push-scope',
           });
         });
     }
