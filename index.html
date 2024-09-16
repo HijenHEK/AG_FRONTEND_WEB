@@ -25,8 +25,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="giga_servizi_app">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
@@ -38,10 +36,14 @@
 
 <script src="flutter_bootstrap.js" async>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/AG_FRONTEND_WEB/firebase-messaging-sw.js', {
-        scope: '/AG_FRONTEND_WEB/firebase-cloud-messaging-push-scope',
-      });
+   const baseUrl = window.location.pathname;
+  const serviceWorkerPath = `${baseUrl}firebase-messaging-sw.js`;
+  navigator.serviceWorker.register(serviceWorkerPath)
+    .then(function(registration) {
+      console.log('Service Worker registered successfully:', registration);
+    })
+    .catch(function(err) {
+      console.log('Service Worker registration failed:', err);
     });
   }
 </script>
